@@ -7,17 +7,19 @@ import java.util.Arrays;
 
 public class PrevailingColor {
 
-    private int amoColorCenter = 3;
-    private BufferedImage image = null;
+    private int amoColorCenter;
+    private BufferedImage image;
 
     PrevailingColor() {}
 
     PrevailingColor(BufferedImage inputImage) {
         image = inputImage;
+        amoColorCenter = 3;
     }
 
     PrevailingColor(int inputAmoColorCenter) {
         amoColorCenter = inputAmoColorCenter;
+        image = null;
     }
 
     PrevailingColor(BufferedImage inputImage, int inputAmoColorCenter) {
