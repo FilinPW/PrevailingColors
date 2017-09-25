@@ -37,14 +37,13 @@ public class PrevailingColor {
         int imageWidth = image.getWidth();
         int imageHeight = image.getHeight();
         Random rnd = new Random(imageWidth + imageHeight);
+        int rndIW = rnd.nextInt(imageWidth);
+        int rndIH = rnd.nextInt(imageHeight);
         int[][] arrayColorCenter = new int[amoColorCenter][4];
         for (int i = 0; i < amoColorCenter; i++) {
-            arrayColorCenter[i][1] = (image.getRGB(rnd.nextInt(imageWidth),
-                    rnd.nextInt(imageHeight)) >> 16) & 0xff;
-            arrayColorCenter[i][2] = (image.getRGB(rnd.nextInt(imageWidth),
-                    rnd.nextInt(imageHeight)) >> 8) & 0xff;
-            arrayColorCenter[i][3] = image.getRGB(rnd.nextInt(imageWidth),
-                    rnd.nextInt(imageHeight)) & 0xff;
+            arrayColorCenter[i][1] = (image.getRGB(rndIW, rndIH) >> 16) & 0xff;
+            arrayColorCenter[i][2] = (image.getRGB(rndIW, rndIH) >> 8) & 0xff;
+            arrayColorCenter[i][3] = image.getRGB(rndIW, rndIH) & 0xff;
         }
 
         int[][] newArrayColorCenters = getNewColorCenters(arrayColorCenter);
