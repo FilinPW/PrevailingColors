@@ -16,7 +16,7 @@ public class PrevailingColors extends Component {
         BufferedImage image = null;
         PrevailingColor pc = null;
         try {
-            image = ImageIO.read(new URL("https://img-fotki.yandex.ru/get/44819/99828525.0/0_f51d2_9b7aed00_orig"));
+            image = ImageIO.read(new URL("https://img-fotki.yandex.ru/get/370378/191119240.332/0_1891f0_27687416_orig"));
         } catch (IOException | IllegalArgumentException e) {
             System.err.println(e.getMessage());
         }

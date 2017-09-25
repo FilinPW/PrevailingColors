@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class PrevailingColor {
 
-    private int amoColorCenter = 5;
+    private int amoColorCenter = 3;
     private BufferedImage image = null;
 
     PrevailingColor() {}
